@@ -1,4 +1,6 @@
-# digitality
+# digitality - automatska digitalizacija računa
+digitality-frontend-ivory.vercel.app/
+
 
 ## Project setup
 ```
