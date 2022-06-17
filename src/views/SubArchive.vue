@@ -273,6 +273,7 @@ export default {
   watch: {
     "searchTerm": _.debounce(function(val) {
       this.searchDocuments(val);
+
     }, 500)
   },
 
@@ -312,26 +313,18 @@ export default {
     },
 
     //napravili, ali nema smisla pošto trenutno naši dokumenti nemaju naslova ili nekog drugog podatka u prikazu komponente(osim datuma kad je kreiran)
-    /*async searchDocuments(pretraga){
+    async searchDocuments(pretraga){
       if(this.searchTerm) {
         pretraga = this.searchTerm.toLowerCase()
-        let regex = new RegExp (`^(${pretraga})`)
-        let tempDoc = this.documentData
-        this.documentData = {}
-        let keys = Object.keys(tempDoc[0])
+  
+        this.documentData = this.documentData.filter(x => String(Object.values(x)).toLowerCase().includes(pretraga));
 
-        for(let i = 0; i < tempDoc.length; i++){
-          for(let j = 0; j < keys.length; j++){
-            if(tempDoc.keys[j].toLowerCase().match(regex)){
-            this.documentData[i] = tempDoc[i] 
-            }
-          }
-        }
+
       } else {
         this.extract_documents()
       }
     },
-    */
+    
    
     async delete_subArchive(){
       let subarchive_id = ''

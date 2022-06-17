@@ -852,7 +852,7 @@ height: 60px;
 
 @media screen and (min-width: 1024px){
  .archive-options{
-  background-color:  blue;
+  background-color:  dodgerblue;
   
   }  
 }
@@ -860,7 +860,7 @@ height: 60px;
 /*###Tablet(medium)###*/
 @media screen and (min-width : 768px) and (max-width : 1023px){
 .archive-options{
-  background-color:  blue;
+  background-color: dodgerblue;
   
   }  
 }
